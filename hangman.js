@@ -16,7 +16,6 @@ const Categories = [
       "Creeps= Lane minions or jungle monsters (usually refers to smaller monsters).",
       "Creep Score= The number of minions, monsters, and other things (such as wards) that a player has killed.",
       "Dive= To look to kill an opponent while they are in range of their turret.",
-      "Damage over time= An ability, attack, or effect which deals damage over time.",
       "Double buff= When a player simultaneously has blue buff and red buff.",
       "Early game= Refers to the first 10-15 minutes of a match when the Top, Mid, and Bot",
       "Elder Drake= A more powerful dragon that spawns after 35 minutes (5 minutes after last dragon is slain).",
