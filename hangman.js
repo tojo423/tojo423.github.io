@@ -2,27 +2,27 @@ const Categories = [
   {
     name: "League of Legends",
     words: [
-      "Balance: The act of Riot trying to make the game feel fairer through buffs, nerfs, and other changes.",
-      "Baron Nashor: A neutral monster that spawns at either 19:45 or 19:55 depending on if Rift",
-      "Blind pick: An early pick in champ select. It’s “blind” because you leave your champion open to be counter-picked.",
-      "Blue buff: Refers to Crest of Insight, the temporary buff you receive when killing the Blue Sentinel or an enemy who had the buff.",
-      "Bounty: A gold reward for killing a player who has a gold lead due to getting kills or a farm lead.",
-      "Buff: An ability that empowers you or your ally, usually through increasing stats.",
-      "Burst: To deal a large amount of damage instantly with an attack or an ability.",
-      "Champion pool: A rotation of champions that a player uses to climb and/or is known for playing.",
-      "Cheese: To use an unconventional and/or unpredictable strategy to win.",
-      "Crowd control: Also known as “CC”.",
-      "Counter pick: A champion pick that is chosen to create a favorable matchup against an already picked enemy champion.",
-      "Creeps: Lane minions or jungle monsters (usually refers to smaller monsters).",
-      "Creep Score: The number of minions, monsters, and other things (such as wards) that a player has killed.",
-      "Dive: To look to kill an opponent while they are in range of their turret.",
-      "Damage over time: An ability, attack, or effect which deals damage over time.",
-      "Double buff: When a player simultaneously has blue buff and red buff.",
-      "Early game: Refers to the first 10-15 minutes of a match when the Top, Mid, and Bot",
-      "Elder Drake: A more powerful dragon that spawns after 35 minutes (5 minutes after last dragon is slain).",
-      "Farm: The act of last-hitting a minion or jungle monster to collect gold and experience.",
-      "Facecheck: To enter a bush or fog of war without vision.",
-      "Fed: When a champion is ahead in gold, levels, and/or kills so that they are much stronger than the enemy team.",
+      "Balance= The act of Riot trying to make the game feel fairer through buffs, nerfs, and other changes.",
+      "Baron Nashor= A neutral monster that spawns at either 19:45 or 19:55 depending on if Rift",
+      "Blind pick= An early pick in champ select. It’s “blind” because you leave your champion open to be counter-picked.",
+      "Blue buff= Refers to Crest of Insight, the temporary buff you receive when killing the Blue Sentinel or an enemy who had the buff.",
+      "Bounty= A gold reward for killing a player who has a gold lead due to getting kills or a farm lead.",
+      "Buff= An ability that empowers you or your ally, usually through increasing stats.",
+      "Burst= To deal a large amount of damage instantly with an attack or an ability.",
+      "Champion pool= A rotation of champions that a player uses to climb and/or is known for playing.",
+      "Cheese= To use an unconventional and/or unpredictable strategy to win.",
+      "Crowd control= Also known as “CC”.",
+      "Counter pick= A champion pick that is chosen to create a favorable matchup against an already picked enemy champion.",
+      "Creeps= Lane minions or jungle monsters (usually refers to smaller monsters).",
+      "Creep Score= The number of minions, monsters, and other things (such as wards) that a player has killed.",
+      "Dive= To look to kill an opponent while they are in range of their turret.",
+      "Damage over time= An ability, attack, or effect which deals damage over time.",
+      "Double buff= When a player simultaneously has blue buff and red buff.",
+      "Early game= Refers to the first 10-15 minutes of a match when the Top, Mid, and Bot",
+      "Elder Drake= A more powerful dragon that spawns after 35 minutes (5 minutes after last dragon is slain).",
+      "Farm= The act of last-hitting a minion or jungle monster to collect gold and experience.",
+      "Facecheck= To enter a bush or fog of war without vision.",
+      "Fed= When a champion is ahead in gold, levels, and/or kills so that they are much stronger than the enemy team.",
     ],
   },
 ];
@@ -148,7 +148,7 @@ function beginGame() {
   const currWordIndex = Math.floor(Math.random() * currCategory.words.length);
   const currWordRaw = currCategory.words[currWordIndex];
 
-  const wordComps = currWordRaw.split(":");
+  const wordComps = currWordRaw.split("=");
   currWord = wordComps[0].toUpperCase();
   currWordNoSpace = currWord.replace(" ", "");
 
