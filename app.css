@@ -1,0 +1,9 @@
+.letter-input {
+  max-width: 55px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.word {
+  margin-bottom: 12px;
+}
