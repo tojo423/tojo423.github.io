@@ -26,7 +26,7 @@ const Categories = [
   },
 ];
 
-const MAX_LIVES = 5;
+const MAX_LIVES = 10;
 
 const startBox = document.querySelector("#start-box");
 const playText = document.querySelector("#play-text");
