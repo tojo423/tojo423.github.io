@@ -214,7 +214,7 @@ function updateLives() {
 function loseLife() {
   currLives--;
   updateLives();
-  if (currLives == 0) loseGame();
+  if (currLives <= 0) loseGame();
 }
 
 function giveUp() {
