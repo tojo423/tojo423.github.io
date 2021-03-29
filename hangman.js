@@ -108,11 +108,11 @@ const giveUpButton = document.querySelector("#give-up");
 
 //sounds
 const sfxDict = {
-  lose: createSfx("sounds/lose.wav"),
-  win: createSfx("sounds/win.wav"),
-  giveup: createSfx("sounds/giveup.wav"),
-  button: createSfx("sounds/button.wav"),
-  incorrect: createSfx("sounds/incorrect.wav"),
+  lose: createSfx(soundLink("lose")),
+  win: createSfx(soundLink("win")),
+  giveup: createSfx(soundLink("giveup")),
+  button: createSfx(soundLink("button")),
+  incorrect: createSfx(soundLink("incorrect")),
 };
 
 let giveUpBlockContainer = giveUpBlock.parentElement;
@@ -138,6 +138,10 @@ createAlphabetButtons();
 
 startButton.onclick = beginGame;
 giveUpButton.onclick = giveUp;
+
+function soundLink(name) {
+  return `https://github.com/tojo423/tojo423.github.io/blob/main/sounds/${name}.wav?raw=true`;
+}
 
 function createSfx(src) {
   var sfx = new Audio(src);
@@ -183,7 +187,7 @@ function setUiState(newState) {
         if (state === "is_playing") {
           giveUpBlockContainer.append(giveUpBlock);
         }
-      }, 3000);
+      }, 1000);
       break;
     //user has guessed the word corrently and won
     case "has_won":
