@@ -249,7 +249,7 @@ function createSfx(src) {
 }
 
 function playSfx(id) {
-  console.log("playing sfx", id);
+  //console.log("playing sfx", id);
   const sfx = sfxDict[id];
   sfx.currentTime = 0;
   sfx.play();
@@ -307,7 +307,7 @@ function setUiState(newState) {
       setEmlsVisible([startBox], [infoBox, alphabetContainer]);
       break;
     default:
-      console.log("undefined state", newState);
+      // console.log("undefined state", newState);
       break;
   }
   state = newState;
@@ -326,12 +326,12 @@ function setTextColor(elm, colorClass) {
 
 function getRandCat() {
   const cats = Categories.filter((i) => Boolean(i.isOn));
-  console.log("cats", cats);
+  //console.log("cats", cats);
   return cats[Math.floor(Math.random() * cats.length)];
 }
 
 function beginGame() {
-  console.log("begin game called!");
+  //console.log("begin game called!");
 
   setUiState("is_playing");
 
@@ -344,12 +344,12 @@ function beginGame() {
   currWord = wordComps[0].toUpperCase().trim();
   currWordNoSpace = currWord.replaceAll(" ", "");
 
-  console.log("currWord", currWord);
-  console.log("currWordNoSpace", currWordNoSpace);
+  //console.log("currWord", currWord);
+  //console.log("currWordNoSpace", currWordNoSpace);
 
   remainingChars = [...currWordNoSpace];
-  console.log("remainingChars", remainingChars);
-  console.log("==========");
+  //console.log("remainingChars", remainingChars);
+  //console.log("==========");
   guessedChars = [];
 
   currHint = wordComps[1].trim();
@@ -364,7 +364,7 @@ function beginGame() {
 
   setInputsColor();
 
-  console.log(currWord, currHint);
+  //console.log(currWord, currHint);
 }
 
 function loseGame() {
@@ -374,7 +374,7 @@ function loseGame() {
 }
 
 function revealLetters(colorClass) {
-  console.log("revealLetters", colorClass);
+  //console.log("revealLetters", colorClass);
   for (i = 0; i < currWordNoSpace.length; i++) {
     const guessedLetter = guessedChars[i];
     if (!Boolean(guessedLetter)) {
@@ -436,14 +436,22 @@ function giveUp() {
 }
 
 function alphabetOnClick(letter) {
-  console.log(letter);
+  //console.log(letter);
 
   const remainingIndex = remainingChars.indexOf(letter);
   if (remainingIndex !== -1) {
+    while (true) {
+      const remainingIndex2 = remainingChars.indexOf(letter);
+      if (remainingIndex2 === -1) break;
+
+      remainingChars[remainingIndex2] = undefined;
+      guessedChars[remainingIndex2] = letter;
+      currInputs[remainingIndex2].value = letter;
+    }
     // character found in remaining array
-    remainingChars[remainingIndex] = undefined;
-    guessedChars[remainingIndex] = letter;
-    currInputs[remainingIndex].value = letter;
+    // remainingChars[remainingIndex] = undefined;
+    // guessedChars[remainingIndex] = letter;
+    // currInputs[remainingIndex].value = letter;
 
     if (remainingChars.filter(Boolean).length === 0) {
       winGame();
@@ -451,8 +459,8 @@ function alphabetOnClick(letter) {
 
     playSfx("button");
 
-    console.log("remainingChars", remainingChars);
-    console.log("guessedChars", guessedChars);
+    //console.log("remainingChars", remainingChars);
+    //console.log("guessedChars", guessedChars);
   } else {
     loseLife();
   }
@@ -487,6 +495,7 @@ function createTags() {
 
     const tagElm = document.createElement("span");
     tagElm.classList.add("tag", "my-tag", "no-select", "is-medium");
+
     tagElm.innerText = cat.name;
     cat.elm = tagElm;
     tagElm.onclick = () => {
@@ -514,14 +523,14 @@ function createInputs() {
   currInputs = [];
 
   const words = currWord.split(" ");
-  console.log("words", words);
+  //console.log("words", words);
   for (i = 0; i < words.length; i++) {
     const wordContainer = document.createElement("div");
     wordContainer.classList.add("word");
     inputsContainer.append(wordContainer);
 
     const wordChars = [...words[i]];
-    console.log("wordChars", wordChars);
+    //console.log("wordChars", wordChars);
     for (j = 0; j < wordChars.length; j++) {
       const input = document.createElement("input");
       input.classList.add(
