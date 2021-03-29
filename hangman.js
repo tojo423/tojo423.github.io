@@ -127,7 +127,7 @@ const Categories = [
       "nijikon= ('2D complex') Describes the perception that two-dimensional anime, manga, and light novel characters are more attractive visually, physically or emotionally than people from the real world, or that a person is solely sexually aroused by 2D characters.",
       "Odagiri effect= A television phenomenon in which a program attracts a larger than expected number of women viewers because the program stars attractive male actors or characters.",
       "otaku= In Japanese slang, it is equivalent to 'geek' or 'nerd', but in a more derogatory manner than used in the West.",
-      "waifu: A fictional character from non-live-action visual media (typically an anime, manga or video game) to whom one is attracted or whom one considers their significant other.",
+      "waifu= A fictional character from non-live-action visual media (typically an anime, manga or video game) to whom one is attracted or whom one considers their significant other.",
       "weeaboo= A derogatory slang term for an obnoxious fan of Japanese culture, originally a replacement word for 'wapanese' (a contraction of 'wannabe' Japanese or 'white' Japanese)",
     ],
   },
