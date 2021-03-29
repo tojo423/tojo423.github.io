@@ -108,11 +108,17 @@ const giveUpButton = document.querySelector("#give-up");
 
 //sounds
 const sfxDict = {
-  lose: createSfx("sounds/lose.wav"),
-  win: createSfx("sounds/win.wav"),
-  giveup: createSfx("sounds/giveup.wav"),
-  button: createSfx("sounds/button.wav"),
-  incorrect: createSfx("sounds/incorrect.wav"),
+  lose: createSfx("https://filebin.net/ncmlpasvgdazthqb/lose.wav?t=vqys5w3o"),
+  win: createSfx("https://filebin.net/ncmlpasvgdazthqb/win.wav?t=vqys5w3o"),
+  giveup: createSfx(
+    "https://filebin.net/ncmlpasvgdazthqb/giveup.wav?t=vqys5w3o"
+  ),
+  button: createSfx(
+    "https://filebin.net/ncmlpasvgdazthqb/button.wav?t=vqys5w3o"
+  ),
+  incorrect: createSfx(
+    "https://filebin.net/ncmlpasvgdazthqb/incorrect.wav?t=vqys5w3o"
+  ),
 };
 
 let giveUpBlockContainer = giveUpBlock.parentElement;
