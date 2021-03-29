@@ -24,6 +24,7 @@ const Categories = [
       "Facecheck= To enter a bush or fog of war without vision.",
       "Fed= When a champion is ahead in gold, levels, and/or kills so that they are much stronger than the enemy team.",
     ],
+    isOn: true,
   },
   {
     name: "CS:GO",
@@ -91,6 +92,9 @@ const Categories = [
 const MAX_LIVES = 10;
 
 const startBox = document.querySelector("#start-box");
+const catsText = document.querySelector("#cats-text");
+const tagsContainer = document.querySelector("#tags");
+const playBlock = document.querySelector("#play-block");
 const playText = document.querySelector("#play-text");
 const startButton = document.querySelector("#start-button");
 
@@ -134,6 +138,7 @@ let state = "initial";
 let gameOver = false;
 
 setUiState();
+createTags();
 createAlphabetButtons();
 
 startButton.onclick = beginGame;
@@ -225,12 +230,18 @@ function setTextColor(elm, colorClass) {
   }
 }
 
+function getRandCat() {
+  const cats = Categories.filter((i) => Boolean(i.isOn));
+  console.log("cats", cats);
+  return cats[Math.floor(Math.random() * cats.length)];
+}
+
 function beginGame() {
   console.log("begin game called!");
 
   setUiState("is_playing");
 
-  currCategory = Categories[Math.floor(Math.random() * Categories.length)];
+  currCategory = getRandCat();
 
   const currWordIndex = Math.floor(Math.random() * currCategory.words.length);
   const currWordRaw = currCategory.words[currWordIndex];
@@ -361,6 +372,44 @@ function createAlphabetButtons() {
     button.append(letter);
     button.onclick = () => alphabetOnClick(letter);
     alphabetContainer.append(button);
+  }
+}
+
+function updateStartBlock() {
+  if (Categories.some((cat) => cat.isOn)) {
+    setEmlsVisible([playBlock], []);
+    catsText.innerText = "Select categories which interest you";
+    setTextColor(catsText);
+  } else {
+    catsText.innerText = "Select at least one category!";
+    setEmlsVisible([], [playBlock]);
+    setTextColor(catsText);
+  }
+}
+
+function createTags() {
+  for (let cat of Categories) {
+    cat.isOn = Boolean(cat.isOn);
+
+    const tagElm = document.createElement("span");
+    tagElm.classList.add("tag", "my-tag", "no-select", "is-medium");
+    tagElm.innerText = cat.name;
+    cat.elm = tagElm;
+    tagElm.onclick = () => {
+      cat.isOn = !cat.isOn;
+      updateCatElm(cat);
+      updateStartBlock();
+    };
+    updateCatElm(cat);
+    tagsContainer.append(tagElm);
+  }
+}
+
+function updateCatElm(cat) {
+  const elm = cat.elm;
+  elm.classList.remove("is-primary");
+  if (cat.isOn) {
+    elm.classList.add("is-primary");
   }
 }
 
