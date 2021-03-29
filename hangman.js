@@ -104,6 +104,83 @@ const Categories = [
       "yandere= A term for a person who is initially loving and caring to someone they like a lot until their romantic love, admiration and devotion becomes feisty and mentally destructive in nature through either overprotectiveness, violence, brutality or all three combined.",
     ],
   },
+  {
+    name: "Anime Demographics",
+    words: [
+      "josei= ('woman') Anime and manga intended for the adult female demographic.",
+      "kodomo= (kodomomuke) Anime and manga for children.",
+      "seinen= Anime and manga intended for the adult male demographic.",
+      "shojo= ('young woman') Anime and manga intended for the adolescent female demographic.",
+      "shonen= ('young man') Anime and manga intended for the adolescent male demographic.",
+    ],
+  },
+  {
+    name: "Anime Fandom",
+    words: [
+      "anipro= A slang term for the parodic use of anime characters by fans, a portmanteau of 'anime' and 'parody'.",
+      "Comiket= (Komiketto, 'comics market') One of the largest trade fairs for dojinshi comics, held twice a year in Ariake, Tokyo.",
+      "dojinshi=  A fan-made or amateurly produced work such as a parody, fan fiction or manga.",
+      "fandub= Short for fan-made dub, describing a film or video in which fans have voiced over the dialogue.",
+      "fansub= Short for fan-made subtitles, describing a film or video in which fans have translated and subtitled the dialogue into another language.",
+      "fudanshi= ('rotten boy') A male fan of yaoi.",
+      "fujoshi= ('rotten girl') A female fan of yaoi.",
+      "nijikon= ('2D complex') Describes the perception that two-dimensional anime, manga, and light novel characters are more attractive visually, physically or emotionally than people from the real world, or that a person is solely sexually aroused by 2D characters.",
+      "Odagiri effect= A television phenomenon in which a program attracts a larger than expected number of women viewers because the program stars attractive male actors or characters.",
+      "otaku= In Japanese slang, it is equivalent to 'geek' or 'nerd', but in a more derogatory manner than used in the West.",
+      "waifu: A fictional character from non-live-action visual media (typically an anime, manga or video game) to whom one is attracted or whom one considers their significant other.",
+      "weeaboo= A derogatory slang term for an obnoxious fan of Japanese culture, originally a replacement word for 'wapanese' (a contraction of 'wannabe' Japanese or 'white' Japanese)",
+    ],
+  },
+  {
+    name: "Anime Genres",
+    words: [
+      "bakunyu= ('enormous breasts') A genre of pornographic media focusing on the depiction of women with large breasts. With regards to bra size, bakunyu are said to be above a G75 bra size but below an M70.",
+      "bara= ('rose') A masculine gay men's culture and, in manga circles, a genre of manga about beefcakey gay men usually by gay men. Compare with the female-created Boys' Love. Also known as gay manga (geikomi, 'gay comics')",
+      "boys love= (boizu rabu): Abbreviated 'BL', male homosexual content aimed at women, currently in general use in Japan to cover yaoi and shonen-ai'.",
+      "harem= A subgenre of anime and manga characterized by an ordinary guy surrounded by a group of women with some being potential love interests. An ordinary girl surrounded by guys is the reverse.",
+      "isekai= ('different world') A subgenre of manga and anime in which characters are transported or reincarnated into an alternate world, often with a high fantasy setting.",
+      "lolicon= (rorikon) Portmanteau for 'lolita complex'. A genre of manga and anime in which childlike female characters are depicted in an erotic manner.",
+      "mecha= anime and manga that feature robots (mecha) in battle.",
+      "shojo-ai= ('girls love') Manga or anime that focus on romances between women.",
+      "shonen-ai= ('boys love') A term denoting male homosexual content in women's media, although this usage is obsolete in Japan. English-speakers frequently use it for material without explicit sex, in anime, manga and related fan fiction. In Japan, it denotes ephebophilia.",
+      "shotacon= (shotakon) A genre of manga and anime wherein childlike male characters are depicted in an erotic manner.",
+      "yaoi= Anime or manga with a focus on homosexual male relationships. Also known as Boys Love. Japanese acronym for 'yama nashi, ochi nashi, imi nashi' (no climax, no point, no meaning). Male-on-male sexual content; usually created by women for women.",
+      "yuri= Anime or manga with a focus on lesbian relationships. In Japan, the term denotes a broad spectrum of attraction between women. It is also used for sexually explicit content outside Japan, and is more explicit than shojo-ai.",
+    ],
+  },
+  {
+    name: "General Anime",
+    words: [
+      "anime music video= Video clips from at least one anime series arranged to fit a musical piece playing in the background.",
+      "Character Voice= CV",
+      "dub= When the voices in an anime are translated into another language.",
+      "eyecatch= (aikyatchi) A scene or illustration used to begin and end a commercial break in a Japanese TV program, similar to commercial bumpers in the United States.",
+      "eroge= (eroge) An eroge, a portmanteau of erotic game (erochikku gemu), is a Japanese video or computer game that features erotic content, usually in the form of anime-style artwork.",
+      "fan service= (fan sabisu) Elements specifically included to sexually amuse (such as scantily-clad or naked males or females, or ecchi content) or titillate the audience, which may or may not be necessary to plot development.",
+      "galge= (gyaruge) This is a type of Japanese video game centered around interactions with attractive anime-style girls. These games are a subgenre of dating sims targeted towards a male audience.",
+      "gekiga= ('dramatic pictures') A term adopted by more serious Japanese cartoonists, who did not want their work to be associated with manga. It is akin to English speakers who prefer the term 'graphic novel', as opposed to 'comic book'.",
+      "gensakusha= ('original author') A term used by derivative works to credit the original creator of a series. It is also used to refer to the writer of a manga, as opposed to its illustrator.",
+      "guro= A type of anime, manga or game which includes violence, torture and sometimes death of the character. Sometimes it's also synonymous with the hentai phrase, ero guro.",
+      "hentai= ('pervert') A term used outside of Japan to describe erotic or pornographic manga and anime.",
+      "june= A manga or text story with male homosexual themes written for women in an aesthetic (tanbi) style, named so because of the June magazine.",
+      "kabedon= When a person slaps or leans against the wall and the other person has nowhere to go. This has become popular as a 'clever move of confession'",
+      "lemon= (remon) Derived from the hentai anthology series Cream Lemon (Kurimu Remon), the term is used to refer to material with explicit sexual content.",
+      "mangaka= Manga artist. A creator of manga; this can refer to both the writer and illustrator of the work.",
+      "mihiraki= A manga scene, usually one single image, spread to cover two opposing pages.",
+      "name= (Nemu) A rough draft of a proposed manga. Also known as a manga storyboard.",
+      "omake= ('extra') An add-on bonus to anime and manga, like a regular 'extra' on western DVDs; or a bonus strip at the end of a manga chapter or volume.",
+      "original net animation= (ONA) An anime production intended to be distributed through the internet via streaming or direct download, as opposed to on TV or cinemas.",
+      "otome game= (otome gemu, lit. 'maiden game') A video game that is targeted towards a female market, where one of the main goals, besides the plot goal, is to develop a romantic relationship between the player character (a female) and one of several male characters.",
+      "original video animation= (OVA) A type of anime which is intended to be distributed on VHS tapes or DVDs and not shown in movies or on television. It is also less frequently referred to as original animated video (OAV).",
+      "raw= Anime episode or manga scans in its original language without editing or subtitles.",
+      "ryona= portmanteau: 'ryoki' ('seeking the bizarre'); 'onani' ('masturbation') a Japanese term for a sexual complex. This fetish revolves around a victim, almost exclusively a female, being physically assaulted or psychologically abused by an offender.",
+      "scanlation= The scanning, translation and editing of comics from one language into another.",
+      "seiyu= A Japanese voice actor. As well as voicing characters in anime, seiyu do voicing for video games, radio shows, drama CDs, and other media.",
+      "tobirae= ('door page') Refers to the full-page illustration that marks the beginning of most manga chapters. Designed to capture the reader's attention, they sometimes spread to cover two opposing pages, and typically contain the series' title and the chapter's title. The equivalent in American comics is the splash page.",
+      "yonkoma= (4, 'four cell manga') Refers to manga drawn in a four-panel comic strip format.",
+      "zettai ryoiki= ('absolute territory') Refers to the area of exposed thigh when a girl is wearing a short skirt and thigh-high socks.",
+    ],
+  },
 ];
 
 const MAX_LIVES = 10;
@@ -264,7 +341,7 @@ function beginGame() {
   const currWordRaw = currCategory.words[currWordIndex];
 
   const wordComps = currWordRaw.split("=");
-  currWord = wordComps[0].toUpperCase();
+  currWord = wordComps[0].toUpperCase().trim();
   currWordNoSpace = currWord.replaceAll(" ", "");
 
   console.log("currWord", currWord);
