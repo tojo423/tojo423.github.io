@@ -87,6 +87,23 @@ const Categories = [
       "Wallbang=	Hitting someone with a bullet through a wall.",
     ],
   },
+  {
+    name: "Anime Character Traits",
+    words: [
+      "ahoge= ('idiot hair') Refers to any noticeable strand of hair which sticks in a different direction from the rest of an anime/manga character's hair.",
+      "bishojo= ('pretty girl') Beautiful young woman.",
+      "bishonen= ('beautiful boy') sometimes abbreviated bishie): Japanese aesthetic concept of the ideally beautiful young man: androgynous, effeminate or gender-ambiguous. In Japan, it refers to youth with such characteristics, while in Europe and the Americas, it has become a generic term for attractively androgynous males of all ages.",
+      "chunibyo= ('middle two disease') typically used to describe early teens who have delusions of grandeur and have convinced themselves they have hidden knowledge or secret powers.",
+      "dandere=  A stock love interest who is quiet and asocial. They are afraid to talk, fearing that what they say will get them in trouble.",
+      "dojikko=  A cute girl who tends to be clumsy. They may make mistakes that hurt themselves or others.",
+      "goudere=  A character who relentlessly pursues their own vision of their love interest's desires, which they typically misunderstand in some comically over-the-top fashion.",
+      "kemonomimi= Characters with animal features such as ears and a tail, but a human body. One of the most common types is the catgirl.",
+      "kuudere=  A stock love interest who is calm and collected on the outside, and never panics. They show little emotion, and in extreme cases are completely emotionless, but may be hiding their true emotions.",
+      "otokonoko= ('male daughter' or 'male girl') a man who adopts a culturally feminine gender expression, usually through cross-dressing or crossplay.",
+      "tsundere= A stock love interest who is usually stern, cold or hostile to the person they like, while occasionally letting slip the warm and loving feelings hidden inside due to being shy, nervous, insecure or simply unable to help acting badly in front of the person they like. ",
+      "yandere= A term for a person who is initially loving and caring to someone they like a lot until their romantic love, admiration and devotion becomes feisty and mentally destructive in nature through either overprotectiveness, violence, brutality or all three combined.",
+    ],
+  },
 ];
 
 const MAX_LIVES = 10;
