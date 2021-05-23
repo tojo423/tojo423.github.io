@@ -9,11 +9,12 @@ class Actor {
   }
   static parse(set) {
     const comps = set.split(",");
+    //console.log("comps", comps);
     const teamId = parseInt(comps[0]);
     const name = comps[1];
     const type = comps[2];
-    const posX = parseFloat(comps[3]) / 1000;
-    const posY = parseFloat(comps[4]) / 1000;
+    const posX = parseFloat(comps[3]);
+    const posY = parseFloat(comps[4]);
     const rot = parseFloat(comps[5]);
     return new Actor(teamId, name, type, posX, posY, rot);
   }
@@ -100,7 +101,9 @@ class Radar {
     this.botColor = "#4895ef";
     this.teamColors = [];
 
-    this.updateInterval = 2000;
+    this.pollInterval = 2000;
+    this.updateInterval = 750;
+    this.actorColl = null;
     this.isStarted = false;
   }
   drawMap() {
@@ -119,6 +122,18 @@ class Radar {
       image.height
     );
   }
+  async getActorColl() {
+    setInterval(async () => {
+      const url = "http://dreamlo.com/lb/60aa0b288f40bb64ec965c93/pipe";
+      const actorColl = new ActorCollection();
+      for await (let line of makeTextFileLineIterator(url)) {
+        //console.log("line", line);
+        const actor = Actor.parse(line);
+        actorColl.actors.push(actor);
+      }
+      this.actorColl = actorColl;
+    }, this.pollInterval);
+  }
   async update() {
     const canvas = this.canvas;
     const ctx = this.ctx;
@@ -126,15 +141,7 @@ class Radar {
 
     this.drawMap();
 
-    const url = "http://dreamlo.com/lb/60aa0b288f40bb64ec965c93/pipe";
-    const actorColl = new ActorCollection();
-    for await (let line of makeTextFileLineIterator(url)) {
-      const actor = Actor.parse(line);
-      actorColl.actors.push(actor);
-    }
-
-    console.log(this.teamColors);
-
+    const actorColl = this.actorColl;
     if (actorColl) {
       const actors = actorColl.actors;
       for (let i = 0; i < actors.length; i++) {
@@ -175,6 +182,9 @@ class Radar {
   start() {
     if (this.isStarted) return;
     this.isStarted = true;
+
+    this.getActorColl();
+
     setInterval(() => {
       this.update().then();
     }, this.updateInterval);
