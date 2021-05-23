@@ -100,7 +100,7 @@ class Radar {
     this.botColor = "#4895ef";
     this.teamColors = [];
 
-    this.updateInterval = 1000;
+    this.updateInterval = 2000;
     this.isStarted = false;
   }
   drawMap() {
